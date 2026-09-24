@@ -6,9 +6,9 @@
     <title>アキラ＆パイ フレーム表</title>
     <style>
         :root {
-            --bg-color: #121214;
+            --bg-color: #0d0d0f;
             --card-bg: #1e1e24;
-            --accent-color: #00d26a;
+            --accent-color: #ff2d6b;
             --text-color: #e0e0e0;
             --border-color: #33333d;
             --header-bg: #2a2a35;
@@ -33,52 +33,49 @@
         }
 
         h2 {
-            font-size: 1.4rem;
+            font-size: 1.9rem;
+            font-weight: 800;
             margin-top: 0;
             color: #ffffff;
-            border-bottom: 2px solid var(--accent-color);
-            padding-bottom: 10px;
-            margin-bottom: 20px;
+            letter-spacing: -0.01em;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 14px;
+            margin-bottom: 24px;
         }
 
         .card {
-            background-color: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            padding: 20px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            padding: 0;
         }
 
         /* タブのスタイル */
         .tab-buttons {
             display: flex;
-            gap: 10px;
-            margin-bottom: 20px;
+            gap: 24px;
+            margin-bottom: 28px;
             border-bottom: 1px solid var(--border-color);
-            padding-bottom: 10px;
             flex-wrap: wrap;
         }
 
         .tab-button {
-            background-color: var(--header-bg);
-            color: var(--text-color);
-            border: 1px solid var(--border-color);
-            padding: 10px 20px;
-            border-radius: 6px;
+            background: none;
+            color: #888;
+            border: none;
+            border-bottom: 2px solid transparent;
+            padding: 10px 2px;
+            margin-bottom: -1px;
             cursor: pointer;
             font-size: 1rem;
-            transition: all 0.2s ease;
+            font-weight: 600;
+            transition: color 0.2s ease;
         }
 
         .tab-button:hover {
-            background-color: #3a3a4a;
+            color: #ccc;
         }
 
         .tab-button.active {
-            background-color: var(--accent-color);
-            color: #000000;
-            font-weight: bold;
-            border-color: var(--accent-color);
+            color: var(--accent-color);
+            border-bottom-color: var(--accent-color);
         }
 
         .tab-content {
@@ -128,7 +125,7 @@
         }
 
         tr:hover {
-            background-color: rgba(0, 210, 106, 0.08);
+            background-color: rgba(255, 45, 107, 0.08);
         }
 
         .col-left {
@@ -136,10 +133,7 @@
         }
 
         .badge {
-            background: #333345;
             color: var(--accent-color);
-            padding: 2px 6px;
-            border-radius: 4px;
             font-family: monospace;
             font-size: 0.85rem;
         }
@@ -148,17 +142,17 @@
         .site-banner { width: 100%; overflow: hidden; background-color: #000; border-bottom: 2px solid var(--accent-color); }
         .site-banner img { width: 100%; height: auto; max-height: 220px; object-fit: cover; display: block; }
         .layout { display: flex; min-height: calc(100vh - 100px); }
-        .sidebar { width: 220px; flex-shrink: 0; background-color: #1a1a1a; border-right: 1px solid #2f2f2f; padding: 24px 16px; }
+        .sidebar { width: 220px; flex-shrink: 0; background-color: #131315; border-right: 1px solid #242426; padding: 24px 16px; }
         .sidebar h2 { font-size: 15px; color: var(--accent-color); margin: 0 0 2px; }
         .sidebar .subtitle { font-size: 11px; color: #888; margin-bottom: 24px; }
-        .sidebar .menu-label { font-size: 11px; color: #777; text-transform: uppercase; letter-spacing: 0.05em; margin: 0 0 8px; padding-left: 10px; }
-        .sidebar nav a { display: block; padding: 9px 10px; margin-bottom: 4px; border-radius: 6px; color: #ddd; text-decoration: none; font-size: 14px; }
-        .sidebar nav a:hover { background-color: #262626; }
-        .sidebar nav a.active { background-color: #2e7d32; color: #fff; font-weight: bold; }
+        .sidebar .menu-label { font-size: 11px; color: #666; margin: 0 0 8px; padding-left: 10px; }
+        .sidebar nav a { display: block; padding: 9px 10px; margin-bottom: 4px; border-radius: 4px; color: #ccc; text-decoration: none; font-size: 14px; }
+        .sidebar nav a:hover { background-color: #1e1e21; }
+        .sidebar nav a.active { background-color: var(--accent-color); color: #fff; font-weight: bold; }
         .main { flex: 1; min-width: 0; padding: 20px; }
         @media (max-width: 700px) {
             .layout { flex-direction: column; }
-            .sidebar { width: 100%; border-right: none; border-bottom: 1px solid #2f2f2f; }
+            .sidebar { width: 100%; border-right: none; border-bottom: 1px solid #242426; }
             .site-banner img { max-height: 120px; }
         }
     </style>
@@ -211,14 +205,14 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr><td colspan="12" class="col-left" style="background:#1a1a22; font-weight:bold; color:var(--accent-color);">■ 基本攻撃</td></tr>
+                        <tr><td colspan="12" class="col-left" style="font-weight:bold; color:var(--accent-color); padding-top:20px; border-bottom:1px solid var(--border-color);">■ 基本攻撃</td></tr>
                         <tr><td class="col-left">沖捶</td><td class="col-left"><span class="badge">P</span></td><td>上段</td><td>12</td><td>9-2</td><td>13</td><td>-1</td><td>0</td><td>+3</td><td>+5</td><td>上P、外上</td><td class="col-left">-</td></tr>
                         <tr><td class="col-left">崩捶</td><td class="col-left"><span class="badge">2P</span></td><td>下段</td><td>10</td><td>10-2</td><td>8</td><td>+2</td><td>+4</td><td>+6</td><td>+8</td><td>外下</td><td class="col-left">-</td></tr>
                         <tr><td class="col-left">昇腿</td><td class="col-left"><span class="badge">K</span></td><td>上段</td><td>30</td><td>12-4</td><td>22</td><td>-4</td><td>D</td><td>D</td><td>D</td><td>上K、外上</td><td class="col-left">-</td></tr>
                         <tr><td class="col-left">易前腿</td><td class="col-left"><span class="badge">2K</span></td><td>下段</td><td>10</td><td>14-2</td><td>22</td><td>-12</td><td>-10</td><td>-8</td><td>-6</td><td>外下</td><td class="col-left">-</td></tr>
                         <tr><td class="col-left">側腿</td><td class="col-left"><span class="badge">3K</span></td><td>中段</td><td>23</td><td>14-3</td><td>25</td><td>-7</td><td>-4</td><td>D</td><td>D</td><td>中K、外中</td><td class="col-left">G1/2</td></tr>
 
-                        <tr><td colspan="12" class="col-left" style="background:#1a1a22; font-weight:bold; color:var(--accent-color);">■ 固有技</td></tr>
+                        <tr><td colspan="12" class="col-left" style="font-weight:bold; color:var(--accent-color); padding-top:20px; border-bottom:1px solid var(--border-color);">■ 固有技</td></tr>
                         <tr><td class="col-left">上歩頂肘</td><td class="col-left"><span class="badge">6P</span></td><td>中段</td><td>19</td><td>12-2</td><td>25</td><td>-9</td><td>-6</td><td>-1</td><td>+1</td><td>中P、外中</td><td class="col-left">G1/2</td></tr>
                         <tr><td class="col-left">裡門頂肘</td><td class="col-left"><span class="badge">66P</span></td><td>中段</td><td>20~40</td><td>10-2</td><td>23(30)</td><td>-6～-3</td><td>D</td><td>D</td><td>D</td><td>中P、外中</td><td class="col-left">G1/2、ダウン、()はヒット時硬化</td></tr>
                         <tr><td class="col-left">躍歩頂肘</td><td class="col-left"><span class="badge">666P</span></td><td>中段</td><td>20~40</td><td>10-2</td><td>23</td><td>-6～-3</td><td>D</td><td>D</td><td>D</td><td>中P、外中</td><td class="col-left">G1/2、軸足、ダウン</td></tr>
@@ -232,7 +226,7 @@
                         <tr><td class="col-left">八門開打</td><td class="col-left"><span class="badge">PP</span></td><td>上中2段</td><td>10+12</td><td>9-2/10-2</td><td>18</td><td>-6</td><td>-5</td><td>-2</td><td>0</td><td>上P</td><td class="col-left">G3/4、軸足、ディレイ</td></tr>
                         <tr><td class="col-left">環捶腿</td><td class="col-left"><span class="badge">PK</span></td><td>上上2段</td><td>10+30</td><td>9-2/12-4</td><td>22</td><td>-4</td><td>D(?)</td><td>D</td><td>D</td><td>上K</td><td class="col-left">ディレイ、()は2.1</td></tr>
 
-                        <tr><td colspan="12" class="col-left" style="background:#1a1a22; font-weight:bold; color:var(--accent-color);">■ 投げ技</td></tr>
+                        <tr><td colspan="12" class="col-left" style="font-weight:bold; color:var(--accent-color); padding-top:20px; border-bottom:1px solid var(--border-color);">■ 投げ技</td></tr>
                         <tr><td class="col-left">倒身捜腿</td><td class="col-left"><span class="badge">近P+G</span></td><td>上段投げ</td><td>20+10+10</td><td>-</td><td>113</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td class="col-left">投げ抜け可</td></tr>
                         <tr><td class="col-left">心意把</td><td class="col-left"><span class="badge">近16P</span></td><td>上段投げ</td><td>60</td><td>-</td><td>108</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td class="col-left">-</td></tr>
                         <tr><td class="col-left">鶴子穿林</td><td class="col-left"><span class="badge">近43P+K</span></td><td>上段投げ</td><td>40</td><td>-</td><td>73(92)</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td class="col-left">()は相手の硬化時間</td></tr>
@@ -241,7 +235,7 @@
                         <tr><td class="col-left">└ 鶴子穿林</td><td class="col-left"><span class="badge">崩拳後 43P+K</span></td><td>-</td><td>35</td><td>-</td><td>64(69)</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td class="col-left">崩撃雲身双虎掌 2段目</td></tr>
                         <tr><td class="col-left">└ 双掌</td><td class="col-left"><span class="badge">鶴子後 4or6P</span></td><td>-</td><td>50</td><td>-</td><td>52</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td class="col-left">崩撃雲身双虎掌 3段目</td></tr>
 
-                        <tr><td colspan="12" class="col-left" style="background:#1a1a22; font-weight:bold; color:var(--accent-color);">■ 崩し技</td></tr>
+                        <tr><td colspan="12" class="col-left" style="font-weight:bold; color:var(--accent-color); padding-top:20px; border-bottom:1px solid var(--border-color);">■ 崩し技</td></tr>
                         <tr><td class="col-left">開胯</td><td class="col-left"><span class="badge">立6P+G</span></td><td>上段崩し</td><td>-</td><td>-</td><td>32(42)</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td class="col-left">()は相手の硬化時間</td></tr>
                         <tr><td class="col-left">翻胯</td><td class="col-left"><span class="badge">立4P+G</span></td><td>上段崩し</td><td>-</td><td>-</td><td>43(55)</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td class="col-left">()は相手の硬化時間</td></tr>
                         <tr><td class="col-left">撃歩翻胯</td><td class="col-left"><span class="badge">立2P+G</span></td><td>上段崩し</td><td>-</td><td>-</td><td>43(54)</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td class="col-left">()は相手の硬化時間</td></tr>
@@ -276,14 +270,14 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr><td colspan="12" class="col-left" style="background:#1a1a22; font-weight:bold; color:var(--accent-color);">■ 基本攻撃</td></tr>
+                        <tr><td colspan="12" class="col-left" style="font-weight:bold; color:var(--accent-color); padding-top:20px; border-bottom:1px solid var(--border-color);">■ 基本攻撃</td></tr>
                         <tr><td class="col-left">冲拳</td><td class="col-left"><span class="badge">P</span></td><td>上段</td><td>10</td><td>8-2</td><td>10</td><td>0</td><td>+2</td><td>+4</td><td>+6</td><td>上P、外上</td><td class="col-left">-</td></tr>
                         <tr><td class="col-left">掃冲拳</td><td class="col-left"><span class="badge">2P</span></td><td>下段</td><td>10</td><td>10-2</td><td>8</td><td>+1</td><td>+2</td><td>+4</td><td>+5</td><td>外下</td><td class="col-left">-</td></tr>
                         <tr><td class="col-left">高蹴腿</td><td class="col-left"><span class="badge">K</span></td><td>上段</td><td>30</td><td>10-4</td><td>30</td><td>-12</td><td>D</td><td>D</td><td>D</td><td>上K、外上</td><td class="col-left">-</td></tr>
                         <tr><td class="col-left">旋栽腿</td><td class="col-left"><span class="badge">2K</span></td><td>下段</td><td>12</td><td>12-1</td><td>25</td><td>-12</td><td>-11</td><td>-8</td><td>-6</td><td>外下</td><td class="col-left">-</td></tr>
                         <tr><td class="col-left">旋中腿</td><td class="col-left"><span class="badge">3K</span></td><td>中段</td><td>21</td><td>14-3</td><td>23</td><td>-6</td><td>-4</td><td>+2</td><td>D</td><td>中K、外中</td><td class="col-left">-</td></tr>
 
-                        <tr><td colspan="12" class="col-left" style="background:#1a1a22; font-weight:bold; color:var(--accent-color);">■ 固有技</td></tr>
+                        <tr><td colspan="12" class="col-left" style="font-weight:bold; color:var(--accent-color); padding-top:20px; border-bottom:1px solid var(--border-color);">■ 固有技</td></tr>
                         <tr><td class="col-left">背身冲拳</td><td class="col-left"><span class="badge">1P</span></td><td>上段</td><td>14</td><td>18-2</td><td>20</td><td>-7</td><td>-5</td><td>-1</td><td>0</td><td>上P、外上</td><td class="col-left">出掛かりに投げ判定</td></tr>
                         <tr><td class="col-left">穿冲拳</td><td class="col-left"><span class="badge">3P</span></td><td>中段</td><td>14</td><td>11-3</td><td>16</td><td>-4</td><td>-2</td><td>+2</td><td>+3</td><td>上P、外上</td><td class="col-left">G3/4</td></tr>
                         <tr><td class="col-left">裏圏捶</td><td class="col-left"><span class="badge">44P</span></td><td>上段</td><td>12</td><td>22-2</td><td>24</td><td>-12</td><td>-11</td><td>-8</td><td>-6</td><td>上P、外上</td><td class="col-left">軸足</td></tr>
@@ -304,13 +298,13 @@
                         <tr><td class="col-left">連環転身掃脚</td><td class="col-left"><span class="badge">PPP2K</span></td><td>上上上下4段</td><td>10+10+12+40</td><td>8-2/7-2/9-2/18-5</td><td>43</td><td>-26</td><td>D</td><td>D</td><td>D</td><td>-</td><td class="col-left">ディレイ</td></tr>
                         <tr><td class="col-left">連環背転脚</td><td class="col-left"><span class="badge">PPP7K</span></td><td>上上上空4段</td><td>10+10+12+20</td><td>8-2/7-2/9-2/10-3</td><td>34</td><td>-18</td><td>D</td><td>D</td><td>D</td><td>-</td><td class="col-left">ディレイ、ダウン</td></tr>
 
-                        <tr><td colspan="12" class="col-left" style="background:#1a1a22; font-weight:bold; color:var(--accent-color);">■ 投げ技</td></tr>
+                        <tr><td colspan="12" class="col-left" style="font-weight:bold; color:var(--accent-color); padding-top:20px; border-bottom:1px solid var(--border-color);">■ 投げ技</td></tr>
                         <tr><td class="col-left">転身捜倒</td><td class="col-left"><span class="badge">近P+G</span></td><td>上段投げ</td><td>50</td><td>-</td><td>18</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td class="col-left">投げ抜け可</td></tr>
                         <tr><td class="col-left">旋風燕陣</td><td class="col-left"><span class="badge">近46P</span></td><td>上段投げ</td><td>60</td><td>-</td><td>18</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td class="col-left">-</td></tr>
                         <tr><td class="col-left">天地頭落</td><td class="col-left"><span class="badge">近62P</span></td><td>上段投げ</td><td>60</td><td>-</td><td>9</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td class="col-left">自ダウン</td></tr>
                         <tr><td class="col-left">倒身陰掌</td><td class="col-left"><span class="badge">近66P+K</span></td><td>上段投げ</td><td>40+10</td><td>-</td><td>32</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td class="col-left">-</td></tr>
 
-                        <tr><td colspan="12" class="col-left" style="background:#1a1a22; font-weight:bold; color:var(--accent-color);">■ 崩し技</td></tr>
+                        <tr><td colspan="12" class="col-left" style="font-weight:bold; color:var(--accent-color); padding-top:20px; border-bottom:1px solid var(--border-color);">■ 崩し技</td></tr>
                         <tr><td class="col-left">掣燕掛塔</td><td class="col-left"><span class="badge">近42P+G</span></td><td>崩し</td><td>30</td><td>-</td><td>68(103)</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td class="col-left">()は相手の硬化時間</td></tr>
                         <tr><td class="col-left">燕風輪翔</td><td class="col-left"><span class="badge">相手屈 6P+K+G</span></td><td>回り込み</td><td>-</td><td>-</td><td>47(55)</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td class="col-left">軸足、()は相手の硬化時間</td></tr>
                     </tbody>
