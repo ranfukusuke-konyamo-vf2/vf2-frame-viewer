@@ -143,14 +143,36 @@
             font-family: monospace;
             font-size: 0.85rem;
         }
+        * { box-sizing: border-box; }
+        body { display: flex; min-height: 100vh; padding: 0; }
+        .sidebar { width: 220px; flex-shrink: 0; background-color: #1a1a1a; border-right: 1px solid #2f2f2f; padding: 24px 16px; }
+        .sidebar h2 { font-size: 15px; color: var(--accent-color); margin: 0 0 2px; }
+        .sidebar .subtitle { font-size: 11px; color: #888; margin-bottom: 24px; }
+        .sidebar .menu-label { font-size: 11px; color: #777; text-transform: uppercase; letter-spacing: 0.05em; margin: 0 0 8px; padding-left: 10px; }
+        .sidebar nav a { display: block; padding: 9px 10px; margin-bottom: 4px; border-radius: 6px; color: #ddd; text-decoration: none; font-size: 14px; }
+        .sidebar nav a:hover { background-color: #262626; }
+        .sidebar nav a.active { background-color: #2e7d32; color: #fff; font-weight: bold; }
+        .main { flex: 1; min-width: 0; padding: 20px; }
+        @media (max-width: 700px) {
+            body { flex-direction: column; }
+            .sidebar { width: 100%; border-right: none; border-bottom: 1px solid #2f2f2f; }
+        }
     </style>
 </head>
 <body>
 
+<aside class="sidebar">
+    <h2>今夜もバーチャ2</h2>
+    <div class="subtitle">VF2コマコンプロジェクト</div>
+    <div class="menu-label">メニュー</div>
+    <nav>
+        <a href="index.html">ホーム</a>
+        <a href="frame-viewer.html" class="active">アキラ＆パイ フレームデータ</a>
+    </nav>
+</aside>
+
+<div class="main">
 <div class="container">
-    <div style="margin-bottom: 16px;">
-        <a href="index.html" style="color: var(--accent-color); text-decoration: none; font-size: 0.9rem;">← ホームに戻る</a>
-    </div>
     <!-- タブボタン -->
     <div class="tab-buttons">
         <button class="tab-button active" onclick="openTab(event, 'tab-akira')">アキラ（結城 晶）</button>
@@ -287,6 +309,7 @@
             </div>
         </div>
     </div>
+</div>
 </div>
 
 <script>

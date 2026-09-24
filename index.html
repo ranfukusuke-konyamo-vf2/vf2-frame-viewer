@@ -5,7 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>VF2コマコン作成プロジェクト</title>
   <style>
-    body { font-family: 'Helvetica Neue', Arial, sans-serif; background-color: #121212; color: #e0e0e0; margin: 0; padding: 20px; line-height: 1.6; }
+    * { box-sizing: border-box; }
+    body { font-family: 'Helvetica Neue', Arial, sans-serif; background-color: #121212; color: #e0e0e0; margin: 0; padding: 0; line-height: 1.6; display: flex; min-height: 100vh; }
+
+    /* サイドバー */
+    .sidebar { width: 220px; flex-shrink: 0; background-color: #1a1a1a; border-right: 1px solid #2f2f2f; padding: 24px 16px; }
+    .sidebar h2 { font-size: 15px; color: #4caf50; margin: 0 0 2px; }
+    .sidebar .subtitle { font-size: 11px; color: #888; margin-bottom: 24px; }
+    .sidebar .menu-label { font-size: 11px; color: #777; text-transform: uppercase; letter-spacing: 0.05em; margin: 0 0 8px; padding-left: 10px; }
+    .sidebar nav a { display: block; padding: 9px 10px; margin-bottom: 4px; border-radius: 6px; color: #ddd; text-decoration: none; font-size: 14px; }
+    .sidebar nav a:hover { background-color: #262626; }
+    .sidebar nav a.active { background-color: #2e7d32; color: #fff; font-weight: bold; }
+
+    /* メインコンテンツ */
+    .main { flex: 1; min-width: 0; padding: 20px; }
     .container { max-width: 900px; margin: 0 auto; background-color: #1e1e1e; padding: 30px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.5); }
     h1 { color: #4caf50; border-bottom: 2px solid #4caf50; padding-bottom: 10px; margin-top: 0; font-size: 24px; }
     h2 { color: #81c784; margin-top: 25px; border-left: 4px solid #4caf50; padding-left: 10px; font-size: 18px; }
@@ -23,31 +36,49 @@
       padding: 10px 18px;
       border-radius: 6px;
       font-size: 14px;
-      transition: background-color 0.2s ease;
     }
     .nav-links a:hover { background-color: #66bb6a; }
+
+    @media (max-width: 700px) {
+      body { flex-direction: column; }
+      .sidebar { width: 100%; border-right: none; border-bottom: 1px solid #2f2f2f; }
+    }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Virtua Fighter 2 トレーニング環境構築プロジェクト</h1>
-    <p>PS3版『バーチャファイター2』には本格的なトレーニングモードが搭載されていません。本プロジェクトは、メンバーシップ限定で<span class="highlight">コマンドコントローラー（コマコン）を活用した独自のトレーニング環境を提供</span>することを目的としています。</p>
-    <h2>プロジェクトの目的</h2>
-    <ul>
-      <li><strong>コマコンによるトレーニング環境の自動化:</strong> 定番コンボの食らい練習や確定反撃の反復練習を簡単に行える仕組みを提供します。</li>
-      <li><strong>初心者・復帰勢の練習効率向上:</strong> 複雑な操作や専用ハードの設定を意識せず、手軽に高度なトレーニング環境を利用可能にします。</li>
-      <li><strong>メンバーシップ限定特典の提供:</strong> 開発したマクロプログラムや設計データ、詳細ガイドをメンバー限定で順次公開・提供します。</li>
-    </ul>
-    <h2>今後のロードマップ</h2>
-    <ul>
-      <li><strong>データ整備:</strong> キャラクターごとのフレーム・技データの集約と整理</li>
-      <li><strong>ハードウェア選定:</strong> Raspberry Pi Pico (RP2040) をベースとした低価格・高性能なコントローラーの選定</li>
-      <li><strong>マクロプログラム開発:</strong> 各種トレーニング用コマンドの組み込みと動作検証</li>
-      <li><strong>配布とレクチャー:</strong> メンバーシップ向けプログラム・ハードウェア情報の配布</li>
-    </ul>
-    <div class="nav-links">
-      <a href="frame-viewer.html">→ アキラ＆パイ フレームデータを見る</a>
+
+  <aside class="sidebar">
+    <h2>今夜もバーチャ2</h2>
+    <div class="subtitle">VF2コマコンプロジェクト</div>
+    <div class="menu-label">メニュー</div>
+    <nav>
+      <a href="index.html" class="active">ホーム</a>
+      <a href="frame-viewer.html">アキラ＆パイ フレームデータ</a>
+    </nav>
+  </aside>
+
+  <div class="main">
+    <div class="container">
+      <h1>Virtua Fighter 2 トレーニング環境構築プロジェクト</h1>
+      <p>PS3版『バーチャファイター2』には本格的なトレーニングモードが搭載されていません。本プロジェクトは、メンバーシップ限定で<span class="highlight">コマンドコントローラー（コマコン）を活用した独自のトレーニング環境を提供</span>することを目的としています。</p>
+      <h2>プロジェクトの目的</h2>
+      <ul>
+        <li><strong>コマコンによるトレーニング環境の自動化:</strong> 定番コンボの食らい練習や確定反撃の反復練習を簡単に行える仕組みを提供します。</li>
+        <li><strong>初心者・復帰勢の練習効率向上:</strong> 複雑な操作や専用ハードの設定を意識せず、手軽に高度なトレーニング環境を利用可能にします。</li>
+        <li><strong>メンバーシップ限定特典の提供:</strong> 開発したマクロプログラムや設計データ、詳細ガイドをメンバー限定で順次公開・提供します。</li>
+      </ul>
+      <h2>今後のロードマップ</h2>
+      <ul>
+        <li><strong>データ整備:</strong> キャラクターごとのフレーム・技データの集約と整理</li>
+        <li><strong>ハードウェア選定:</strong> Raspberry Pi Pico (RP2040) をベースとした低価格・高性能なコントローラーの選定</li>
+        <li><strong>マクロプログラム開発:</strong> 各種トレーニング用コマンドの組み込みと動作検証</li>
+        <li><strong>配布とレクチャー:</strong> メンバーシップ向けプログラム・ハードウェア情報の配布</li>
+      </ul>
+      <div class="nav-links">
+        <a href="frame-viewer.html">→ アキラ＆パイ フレームデータを見る</a>
+      </div>
     </div>
   </div>
+
 </body>
 </html>
