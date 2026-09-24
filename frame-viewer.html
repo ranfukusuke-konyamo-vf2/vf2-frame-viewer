@@ -8,7 +8,7 @@
         :root {
             --bg-color: #0d0d0f;
             --card-bg: #1e1e24;
-            --accent-color: #ff2d6b;
+            --accent-color: #c2394f;
             --text-color: #e0e0e0;
             --border-color: #33333d;
             --header-bg: #2a2a35;
@@ -125,7 +125,7 @@
         }
 
         tr:hover {
-            background-color: rgba(255, 45, 107, 0.08);
+            background-color: rgba(194, 57, 79, 0.1);
         }
 
         .col-left {
@@ -140,7 +140,7 @@
         * { box-sizing: border-box; }
         body { padding: 0; }
         .site-banner { width: 100%; overflow: hidden; background-color: #000; border-bottom: 2px solid var(--accent-color); }
-        .site-banner img { width: 100%; height: auto; max-height: 220px; object-fit: cover; display: block; }
+        .site-banner img { width: 100%; height: 220px; object-fit: contain; display: block; }
         .layout { display: flex; min-height: calc(100vh - 100px); }
         .sidebar { width: 220px; flex-shrink: 0; background-color: #131315; border-right: 1px solid #242426; padding: 24px 16px; }
         .sidebar h2 { font-size: 15px; color: var(--accent-color); margin: 0 0 2px; }
@@ -153,7 +153,7 @@
         @media (max-width: 700px) {
             .layout { flex-direction: column; }
             .sidebar { width: 100%; border-right: none; border-bottom: 1px solid #242426; }
-            .site-banner img { max-height: 120px; }
+            .site-banner img { height: 120px; }
         }
     </style>
 </head>
@@ -167,7 +167,7 @@
 <aside class="sidebar">
     <h2>今夜もバーチャ2</h2>
     <div class="subtitle">VF2コマコンプロジェクト</div>
-    <div class="menu-label">メニュー</div>
+    <div class="menu-label">フレームデータ</div>
     <nav>
         <a href="index.html">ホーム</a>
         <a href="frame-viewer.html" class="active">アキラ＆パイ フレームデータ</a>
@@ -180,6 +180,14 @@
     <div class="tab-buttons">
         <button class="tab-button active" onclick="openTab(event, 'tab-akira')">アキラ（結城 晶）</button>
         <button class="tab-button" onclick="openTab(event, 'tab-pai')">パイ（パイ・チェン）</button>
+        <button class="tab-button" onclick="openTab(event, 'tab-wolf')">ウルフ（ウルフ・フォークフィールド）</button>
+        <button class="tab-button" onclick="openTab(event, 'tab-jeffry')">ジェフリー（ジェフリー・マクワイルド）</button>
+        <button class="tab-button" onclick="openTab(event, 'tab-kage')">カゲ（影丸）</button>
+        <button class="tab-button" onclick="openTab(event, 'tab-sarah')">サラ（サラ・ブライアント）</button>
+        <button class="tab-button" onclick="openTab(event, 'tab-jacky')">ジャッキー（ジャッキー・ブライアント）</button>
+        <button class="tab-button" onclick="openTab(event, 'tab-shun')">シュン（舜帝）</button>
+        <button class="tab-button" onclick="openTab(event, 'tab-lau')">ラウ（ラウ・チェン）</button>
+        <button class="tab-button" onclick="openTab(event, 'tab-lion')">リオン（リオン・ラファール）</button>
     </div>
 
     <!-- アキラ フレーム表タブ -->
@@ -311,6 +319,220 @@
                 </table>
             </div>
         </div>
+
+
+    <div id="tab-wolf" class="tab-content">
+        <div class="card">
+            <h2>ウルフ（ウルフ・フォークフィールド）フレームデータ一覧</h2>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+<th class="col-left">技名</th><th class="col-left">コマンド</th><th>属性</th><th>ダメージ</th><th>発生-持続</th><th>硬化</th><th>G</th><th>H</th><th>S</th><th>C</th><th>返し技</th><th class="col-left">備考</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td colspan="12" class="col-left" style="font-weight:bold; color:var(--accent-color); padding-top:20px; border-bottom:1px solid var(--border-color);">■ 基本攻撃</td></tr>
+<tr><td class="col-left">ストレートハンマー</td><td class="col-left">P</td><td>上段</td><td>14</td><td>12-2</td><td>6</td><td>+7</td><td>+9</td><td>+13</td><td>+14</td><td>上P、外上</td><td class="col-left">-</td></tr>
+<tr><td class="col-left">ローハンマー</td><td class="col-left">2P</td><td>下段</td><td>10</td><td>10-2</td><td>8</td><td>+2</td><td>+4</td><td>+6</td><td>+8</td><td>外下</td><td class="col-left">-</td></tr>
+<tr><td class="col-left">ハイキック</td><td class="col-left">K</td><td>上段</td><td>36</td><td>16-4</td><td>20</td><td>-2</td><td>D</td><td>D</td><td>D</td><td>上K、外上</td><td class="col-left">-</td></tr>
+<tr><td class="col-left">フェイスリフトキック</td><td class="col-left">3K</td><td>中段</td><td>33</td><td>16-3</td><td>35</td><td>-16</td><td>D</td><td>D</td><td>D</td><td>中K、外中</td><td class="col-left">-</td></tr>
+<tr><td colspan="12" class="col-left" style="font-weight:bold; color:var(--accent-color); padding-top:20px; border-bottom:1px solid var(--border-color);">■ 固有技</td></tr>
+<tr><td class="col-left">バーティカルアッパー</td><td class="col-left">3_P</td><td>中段</td><td>22</td><td>13-3</td><td>22</td><td>-5</td><td>-2</td><td>+4</td><td>D</td><td>上P、外上</td><td class="col-left">G3/4</td></tr>
+<tr><td class="col-left">ボディブロー</td><td class="col-left">6P</td><td>中段</td><td>22</td><td>14-3</td><td>24</td><td>-7</td><td>-4</td><td>+2</td><td>D</td><td>-</td><td class="col-left">G3/4</td></tr>
+<tr><td class="col-left">アックスラリアート</td><td class="col-left">66P</td><td>強上段</td><td>40</td><td>24-8</td><td>38</td><td>D</td><td>D</td><td>D</td><td>D</td><td>-</td><td class="col-left">G1/2、ダウン</td></tr>
+<tr><td class="col-left">ジャイアントスイング</td><td class="col-left">近41236P</td><td>上段投げ</td><td>100</td><td>-</td><td>226</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td class="col-left">-</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div id="tab-jeffry" class="tab-content">
+        <div class="card">
+            <h2>ジェフリー（ジェフリー・マクワイルド）フレームデータ一覧</h2>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+<th class="col-left">技名</th><th class="col-left">コマンド</th><th>属性</th><th>ダメージ</th><th>発生-持続</th><th>硬化</th><th>G</th><th>H</th><th>S</th><th>C</th><th>返し技</th><th class="col-left">備考</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td colspan="12" class="col-left" style="font-weight:bold; color:var(--accent-color); padding-top:20px; border-bottom:1px solid var(--border-color);">■ 基本攻撃</td></tr>
+<tr><td class="col-left">ストレートナックル</td><td class="col-left">P</td><td>上段</td><td>14</td><td>12-2</td><td>6</td><td>+7</td><td>+9</td><td>+13</td><td>+14</td><td>上P、外上</td><td class="col-left">-</td></tr>
+<tr><td class="col-left">ローナックル</td><td class="col-left">2P</td><td>下段</td><td>10</td><td>10-2</td><td>8</td><td>+2</td><td>+4</td><td>+6</td><td>+8</td><td>外下</td><td class="col-left">-</td></tr>
+<tr><td class="col-left">サイドキック</td><td class="col-left">3K</td><td>中段</td><td>33</td><td>16-3</td><td>35</td><td>-16</td><td>D</td><td>D</td><td>D</td><td>中K、外中</td><td class="col-left">G3/4、ダウン</td></tr>
+<tr><td colspan="12" class="col-left" style="font-weight:bold; color:var(--accent-color); padding-top:20px; border-bottom:1px solid var(--border-color);">■ 固有技</td></tr>
+<tr><td class="col-left">エルボーバット</td><td class="col-left">6P</td><td>中段</td><td>19</td><td>12-1</td><td>26</td><td>-9</td><td>-6</td><td>-1</td><td>+1</td><td>中P、外中</td><td class="col-left">G1/2</td></tr>
+<tr><td class="col-left">ダッシュエルボー</td><td class="col-left">66P</td><td>中段</td><td>19</td><td>16-2</td><td>20</td><td>-4</td><td>-1</td><td>+4</td><td>+6</td><td>中P、外中</td><td class="col-left">G3/4、軸足</td></tr>
+<tr><td class="col-left">ニーアタック</td><td class="col-left">6K</td><td>中段</td><td>35</td><td>15-2</td><td>29</td><td>-9</td><td>D</td><td>D</td><td>D</td><td>-</td><td class="col-left">G3/4、軸足、ダウン</td></tr>
+<tr><td class="col-left">スプラッシュマウンテン</td><td class="col-left">近33P+K</td><td>上段投げ</td><td>80</td><td>-</td><td>248</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td class="col-left">軸足</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div id="tab-kage" class="tab-content">
+        <div class="card">
+            <h2>カゲ（影丸）フレームデータ一覧</h2>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+<th class="col-left">技名</th><th class="col-left">コマンド</th><th>属性</th><th>ダメージ</th><th>発生-持続</th><th>硬化</th><th>G</th><th>H</th><th>S</th><th>C</th><th>返し技</th><th class="col-left">備考</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td colspan="12" class="col-left" style="font-weight:bold; color:var(--accent-color); padding-top:20px; border-bottom:1px solid var(--border-color);">■ 基本攻撃</td></tr>
+<tr><td class="col-left">弾拳</td><td class="col-left">P</td><td>上段</td><td>10</td><td>8-2</td><td>10</td><td>0</td><td>+2</td><td>+4</td><td>+6</td><td>上P、外上</td><td class="col-left">-</td></tr>
+<tr><td class="col-left">地擂り弾</td><td class="col-left">2P</td><td>下段</td><td>10</td><td>10-2</td><td>8</td><td>+2</td><td>+4</td><td>+6</td><td>+8</td><td>外下</td><td class="col-left">-</td></tr>
+<tr><td class="col-left">中蹴り</td><td class="col-left">3K</td><td>中段</td><td>22</td><td>14-3</td><td>24</td><td>-7</td><td>-4</td><td>+2</td><td>D</td><td>中K、外中</td><td class="col-left">G1/2</td></tr>
+<tr><td colspan="12" class="col-left" style="font-weight:bold; color:var(--accent-color); padding-top:20px; border-bottom:1px solid var(--border-color);">■ 固有技</td></tr>
+<tr><td class="col-left">肘打ち</td><td class="col-left">6P</td><td>中段</td><td>19</td><td>11-2</td><td>21</td><td>-5</td><td>-2</td><td>+3</td><td>+5</td><td>中P、外中</td><td class="col-left">G1/2</td></tr>
+<tr><td class="col-left">浮身膝蹴り</td><td class="col-left">2_6K</td><td>空中</td><td>38</td><td>14-6</td><td>36</td><td>-20</td><td>D</td><td>D</td><td>D</td><td>-</td><td class="col-left">軸足</td></tr>
+<tr><td class="col-left">流影脚</td><td class="col-left">66K</td><td>下段</td><td>20~30</td><td>26-7</td><td>30</td><td>-18~-15</td><td>D</td><td>D</td><td>D</td><td>-</td><td class="col-left">軸足、ダウン</td></tr>
+<tr><td class="col-left">弧延落</td><td class="col-left">近4P</td><td>上段投げ</td><td>40</td><td>-</td><td>83</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td class="col-left">-</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div id="tab-sarah" class="tab-content">
+        <div class="card">
+            <h2>サラ（サラ・ブライアント）フレームデータ一覧</h2>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+<th class="col-left">技名</th><th class="col-left">コマンド</th><th>属性</th><th>ダメージ</th><th>発生-持続</th><th>硬化</th><th>G</th><th>H</th><th>S</th><th>C</th><th>返し技</th><th class="col-left">備考</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td colspan="12" class="col-left" style="font-weight:bold; color:var(--accent-color); padding-top:20px; border-bottom:1px solid var(--border-color);">■ 基本攻撃</td></tr>
+<tr><td class="col-left">ストレート・リード</td><td class="col-left">P</td><td>上段</td><td>10</td><td>8-2</td><td>10</td><td>0</td><td>+2</td><td>+4</td><td>+6</td><td>上P、外上</td><td class="col-left">-</td></tr>
+<tr><td class="col-left">スクァト・ストレート</td><td class="col-left">2P</td><td>下段</td><td>10</td><td>10-2</td><td>8</td><td>+2</td><td>+4</td><td>+6</td><td>+8</td><td>外下</td><td class="col-left">-</td></tr>
+<tr><td class="col-left">ヴァーティカル・フック・キック</td><td class="col-left">K</td><td>上段</td><td>30</td><td>12-4</td><td>22</td><td>-4</td><td>D</td><td>D</td><td>D</td><td>上K、外上</td><td class="col-left">-</td></tr>
+<tr><td class="col-left">ミドルキック</td><td class="col-left">3K</td><td>中段</td><td>19</td><td>12-3</td><td>38</td><td>-23</td><td>-20</td><td>-15</td><td>-13</td><td>中K、外中</td><td class="col-left">G1/2</td></tr>
+<tr><td colspan="12" class="col-left" style="font-weight:bold; color:var(--accent-color); padding-top:20px; border-bottom:1px solid var(--border-color);">■ 固有技</td></tr>
+<tr><td class="col-left">ライジングエルボー</td><td class="col-left">6P</td><td>中段</td><td>15</td><td>11-2</td><td>19</td><td>-5</td><td>-3</td><td>+1</td><td>+3</td><td>中P、外中</td><td class="col-left">G1/2</td></tr>
+<tr><td class="col-left">サマーソルトキック</td><td class="col-left">7K</td><td>中段</td><td>50</td><td>10-4</td><td>42</td><td>-24</td><td>D</td><td>D</td><td>D</td><td>-</td><td class="col-left">G1/2、ダウン</td></tr>
+<tr><td class="col-left">サミング・トーキック</td><td class="col-left">6K</td><td>中段</td><td>30</td><td>15-2</td><td>29</td><td>-9</td><td>D</td><td>D</td><td>D</td><td>-</td><td class="col-left">G3/4、軸足、ダウン</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div id="tab-jacky" class="tab-content">
+        <div class="card">
+            <h2>ジャッキー（ジャッキー・ブライアント）フレームデータ一覧</h2>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+<th class="col-left">技名</th><th class="col-left">コマンド</th><th>属性</th><th>ダメージ</th><th>発生-持続</th><th>硬化</th><th>G</th><th>H</th><th>S</th><th>C</th><th>返し技</th><th class="col-left">備考</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td colspan="12" class="col-left" style="font-weight:bold; color:var(--accent-color); padding-top:20px; border-bottom:1px solid var(--border-color);">■ 基本攻撃</td></tr>
+<tr><td class="col-left">ストレート・リード</td><td class="col-left">P</td><td>上段</td><td>12</td><td>10-2</td><td>9</td><td>+3</td><td>+4</td><td>+7</td><td>+9</td><td>上P、外上</td><td class="col-left">-</td></tr>
+<tr><td class="col-left">スクァト・ストレート</td><td class="col-left">2P</td><td>下段</td><td>10</td><td>10-2</td><td>8</td><td>+2</td><td>+4</td><td>+6</td><td>+8</td><td>外下</td><td class="col-left">-</td></tr>
+<tr><td class="col-left">ミドルキック</td><td class="col-left">3K</td><td>中段</td><td>25</td><td>14-3</td><td>29</td><td>-10</td><td>D</td><td>D</td><td>D</td><td>中K、外中</td><td class="col-left">G1/2、ダウン</td></tr>
+<tr><td colspan="12" class="col-left" style="font-weight:bold; color:var(--accent-color); padding-top:20px; border-bottom:1px solid var(--border-color);">■ 固有技</td></tr>
+<tr><td class="col-left">ライジングエルボー</td><td class="col-left">6P</td><td>中段</td><td>19</td><td>11-2</td><td>21</td><td>-5</td><td>-2</td><td>+3</td><td>+5</td><td>中P、外中</td><td class="col-left">G1/2</td></tr>
+<tr><td class="col-left">サマーソルトキック</td><td class="col-left">7K</td><td>中段</td><td>60</td><td>10-4</td><td>50</td><td>-32</td><td>D</td><td>D</td><td>D</td><td>-</td><td class="col-left">G1/2</td></tr>
+<tr><td class="col-left">ビートナックル</td><td class="col-left">P+K</td><td>中段</td><td>30</td><td>14-4</td><td>32</td><td>-14</td><td>D</td><td>D</td><td>D</td><td>上P、外上</td><td class="col-left">G1/2</td></tr>
+<tr><td class="col-left">ノーザンライトボム</td><td class="col-left">近P+G</td><td>上段投げ</td><td>50</td><td>-</td><td>153</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td class="col-left">自ダウン、投げ抜け可</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div id="tab-shun" class="tab-content">
+        <div class="card">
+            <h2>シュン（舜帝）フレームデータ一覧</h2>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+<th class="col-left">技名</th><th class="col-left">コマンド</th><th>属性</th><th>ダメージ</th><th>発生-持続</th><th>硬化</th><th>G</th><th>H</th><th>S</th><th>C</th><th>返し技</th><th class="col-left">備考</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td colspan="12" class="col-left" style="font-weight:bold; color:var(--accent-color); padding-top:20px; border-bottom:1px solid var(--border-color);">■ 基本攻撃</td></tr>
+<tr><td class="col-left">挑撃</td><td class="col-left">P</td><td>上段</td><td>10</td><td>9-2</td><td>13</td><td>-3</td><td>-1</td><td>+1</td><td>+3</td><td>上P、外上</td><td class="col-left">-</td></tr>
+<tr><td class="col-left">伏挑撃</td><td class="col-left">2P</td><td>下段</td><td>8</td><td>9-3</td><td>10</td><td>-2</td><td>-1</td><td>+1</td><td>+2</td><td>外下</td><td class="col-left">-</td></tr>
+<tr><td class="col-left">側端脚</td><td class="col-left">3K</td><td>中段</td><td>21</td><td>14-3</td><td>25</td><td>-8</td><td>-6</td><td>0</td><td>D</td><td>中K、外中</td><td class="col-left">G1/2</td></tr>
+<tr><td colspan="12" class="col-left" style="font-weight:bold; color:var(--accent-color); padding-top:20px; border-bottom:1px solid var(--border-color);">■ 固有技</td></tr>
+<tr><td class="col-left">月牙叉撃</td><td class="col-left">屈3P</td><td>中段</td><td>30</td><td>16-3</td><td>27</td><td>-8</td><td>D</td><td>D</td><td>D</td><td>上P、外上</td><td class="col-left">G3/4、ダウン</td></tr>
+<tr><td class="col-left">挑腕撩拳</td><td class="col-left">236P</td><td>中段</td><td>30</td><td>12-6</td><td>19</td><td>-3</td><td>D</td><td>D</td><td>D</td><td>上P、外上</td><td class="col-left">G1/2、ダウン</td></tr>
+<tr><td class="col-left">転身双冲掌</td><td class="col-left">P+K</td><td>中段</td><td>39</td><td>33-2</td><td>30</td><td>-10</td><td>D</td><td>D</td><td>D</td><td>-</td><td class="col-left">G3/4、軸足、飲酒</td></tr>
+<tr><td class="col-left">酔歩転身肘</td><td class="col-left">近P+G</td><td>上段投げ</td><td>50</td><td>-</td><td>178</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td class="col-left">飲酒、投げ抜け可</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div id="tab-lau" class="tab-content">
+        <div class="card">
+            <h2>ラウ（ラウ・チェン）フレームデータ一覧</h2>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+<th class="col-left">技名</th><th class="col-left">コマンド</th><th>属性</th><th>ダメージ</th><th>発生-持続</th><th>硬化</th><th>G</th><th>H</th><th>S</th><th>C</th><th>返し技</th><th class="col-left">備考</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td colspan="12" class="col-left" style="font-weight:bold; color:var(--accent-color); padding-top:20px; border-bottom:1px solid var(--border-color);">■ 基本攻撃</td></tr>
+<tr><td class="col-left">冲拳</td><td class="col-left">P</td><td>上段</td><td>12</td><td>9-2</td><td>10</td><td>+2</td><td>+3</td><td>+6</td><td>+8</td><td>上P、外上</td><td class="col-left">-</td></tr>
+<tr><td class="col-left">掃冲拳</td><td class="col-left">2P</td><td>下段</td><td>10</td><td>10-2</td><td>8</td><td>+2</td><td>+4</td><td>+6</td><td>+8</td><td>外下</td><td class="col-left">-</td></tr>
+<tr><td class="col-left">括面腿</td><td class="col-left">K</td><td>上段</td><td>30</td><td>12-4</td><td>22</td><td>-4</td><td>D</td><td>D</td><td>D</td><td>上K、外上</td><td class="col-left">斜上掌</td></tr>
+<tr><td class="col-left">旋中腿</td><td class="col-left">3K</td><td>中段</td><td>23</td><td>14-3</td><td>25</td><td>-7</td><td>-4</td><td>D</td><td>D</td><td>中K、外中</td><td class="col-left">G1/2</td></tr>
+<tr><td colspan="12" class="col-left" style="font-weight:bold; color:var(--accent-color); padding-top:20px; border-bottom:1px solid var(--border-color);">■ 固有技</td></tr>
+<tr><td class="col-left">肘撃</td><td class="col-left">6P</td><td>中段</td><td>19</td><td>11-2</td><td>21</td><td>-5</td><td>-2</td><td>+3</td><td>+5</td><td>中P、外中</td><td class="col-left">G3/4</td></tr>
+<tr><td class="col-left">斜上掌</td><td class="col-left">3_P</td><td>特殊中段</td><td>20</td><td>13-3</td><td>22</td><td>-6</td><td>-3</td><td>+2</td><td>D</td><td>上P、外上</td><td class="col-left">G3/4</td></tr>
+<tr><td class="col-left">順歩冲掌</td><td class="col-left">33P</td><td>中段</td><td>20</td><td>23-4</td><td>18</td><td>-30</td><td>+5</td><td>D</td><td>-</td><td>上P、外上</td><td class="col-left">G1/2、軸足</td></tr>
+<tr><td class="col-left">地掃腿</td><td class="col-left">62K</td><td>下段</td><td>30</td><td>21-3</td><td>30</td><td>-11</td><td>D</td><td>D</td><td>D</td><td>外下</td><td class="col-left">-</td></tr>
+<tr><td colspan="12" class="col-left" style="font-weight:bold; color:var(--accent-color); padding-top:20px; border-bottom:1px solid var(--border-color);">■ 投げ技</td></tr>
+<tr><td class="col-left">肩車頭落</td><td class="col-left">近P+G</td><td>上段投げ</td><td>40</td><td>-</td><td>109</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td class="col-left">投げ抜け可</td></tr>
+<tr><td class="col-left">転身巴咽掌</td><td class="col-left">近46P</td><td>上段投げ</td><td>60</td><td>-</td><td>164</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td class="col-left">-</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div id="tab-lion" class="tab-content">
+        <div class="card">
+            <h2>リオン（リオン・ラファール）フレームデータ一覧</h2>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+<th class="col-left">技名</th><th class="col-left">コマンド</th><th>属性</th><th>ダメージ</th><th>発生-持続</th><th>硬化</th><th>G</th><th>H</th><th>S</th><th>C</th><th>返し技</th><th class="col-left">備考</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td colspan="12" class="col-left" style="font-weight:bold; color:var(--accent-color); padding-top:20px; border-bottom:1px solid var(--border-color);">■ 基本攻撃</td></tr>
+<tr><td class="col-left">統捶</td><td class="col-left">P</td><td>上段</td><td>12</td><td>11-3</td><td>16</td><td>-5</td><td>-4</td><td>-1</td><td>+1</td><td>上P、外上</td><td class="col-left">-</td></tr>
+<tr><td class="col-left">下統捶</td><td class="col-left">2P</td><td>下段</td><td>8</td><td>10-4</td><td>9</td><td>-2</td><td>-1</td><td>+1</td><td>+2</td><td>外下</td><td class="col-left">-</td></tr>
+<tr><td class="col-left">弾腿</td><td class="col-left">3K</td><td>中段</td><td>24</td><td>16-2</td><td>24</td><td>-4</td><td>-1</td><td>D</td><td>D</td><td>中K、外中</td><td class="col-left">G1/2、軸足</td></tr>
+<tr><td colspan="12" class="col-left" style="font-weight:bold; color:var(--accent-color); padding-top:20px; border-bottom:1px solid var(--border-color);">■ 固有技</td></tr>
+<tr><td class="col-left">盤肘</td><td class="col-left">6P</td><td>中段</td><td>19</td><td>11-5</td><td>24</td><td>-11</td><td>-8</td><td>-3</td><td>-1</td><td>中P、外中</td><td class="col-left">G1/2</td></tr>
+<tr><td class="col-left">箭疾歩</td><td class="col-left">66P</td><td>中段</td><td>40</td><td>28-6</td><td>20</td><td>-4</td><td>D</td><td>D</td><td>D</td><td>上P、外上</td><td class="col-left">G3/4</td></tr>
+<tr><td class="col-left">前掃腿</td><td class="col-left">2KK</td><td>下下2段</td><td>12+16</td><td>19-3/18-4</td><td>34</td><td>-22</td><td>D</td><td>D</td><td>D</td><td>外下</td><td class="col-left">ディレイ、ダウン</td></tr>
+<tr><td class="col-left">破刀手秋腿</td><td class="col-left">近P+G</td><td>上段投げ</td><td>50</td><td>-</td><td>50</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td class="col-left">軸足、投げ抜け可</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
     </div>
 </div>
 </div>
