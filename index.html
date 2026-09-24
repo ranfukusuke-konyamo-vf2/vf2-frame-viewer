@@ -35,7 +35,11 @@
     li { margin-bottom: 14px; padding-left: 20px; position: relative; color: #c4c4c4; font-size: 15px; }
     li::before { content: "▸"; position: absolute; left: 0; color: #c2394f; }
     li strong { color: #eee; }
+    li ul { margin-top: 10px; }
+    li li { margin-bottom: 8px; font-size: 14px; }
     .highlight { color: #c2394f; font-weight: 700; }
+    .note { margin: 28px 0; padding: 18px 20px; border-left: 3px solid #c2394f; background-color: #16161a; }
+    .note p:last-child { margin-bottom: 0; }
 
     .nav-links { margin-top: 48px; padding-top: 24px; border-top: 1px solid #2a2a2d; }
     .nav-links a { color: #c2394f; font-weight: 700; text-decoration: none; font-size: 15px; }
@@ -69,21 +73,44 @@
 
   <div class="main">
     <div class="content">
-      <h1>Virtua Fighter 2 トレーニング環境構築プロジェクト</h1>
-      <p>PS3版『バーチャファイター2』には本格的なトレーニングモードが搭載されていません。本プロジェクトは、メンバーシップ限定で<span class="highlight">コマンドコントローラー（コマコン）を活用した独自のトレーニング環境を提供</span>することを目的としています。</p>
-      <h2>プロジェクトの目的</h2>
+      <h1>バーチャファイター2 トレーニング環境（コマコン）提供プロジェクトについて</h1>
+      <p>本プロジェクトの目的は、PS3版『バーチャファイター2（VF2）』において、専用コマンドコントローラー（コマコン）を手段として活用し、実質的な<span class="highlight">「トレーニングモード」の環境をユーザーに提供する</span>ことです。</p>
+
+      <h2>なぜ提供するのか</h2>
+      <p>PS3版の『バーチャファイター2』には、現代の格闘ゲームでは当たり前となっている「トレーニングモード」が存在しません。</p>
+      <p>そのため、「特定の状況を反復練習したい」「技のフレームを正確に検証したい」とトレーニング環境を求める声が数多くあります。</p>
+      <p>その解決手段として、マイコン制御による「コマコン」を用いて相手側の操作を自動化・固定化することが非常に有効です。</p>
+      <p>しかし、自力でハードウェアを構築し、フレーム単位で正確な制御プログラムを設計するのは困難です。</p>
+      <p>そこで、私が疑似的なトレーニングモードを実現するための制御プログラムおよびハードウェア環境を開発し、皆様に提供します。</p>
+
+      <h2>提供内容</h2>
+      <p>本プロジェクトの成果物は、YouTubeのメンバーシップ等を通じて以下の形で提供予定です。</p>
       <ul>
-        <li><strong>コマコンによるトレーニング環境の自動化:</strong> 定番コンボの食らい練習や確定反撃の反復練習を簡単に行える仕組みを提供します。</li>
-        <li><strong>初心者・復帰勢の練習効率向上:</strong> 複雑な操作や専用ハードの設定を意識せず、手軽に高度なトレーニング環境を利用可能にします。</li>
-        <li><strong>メンバーシップ限定特典の提供:</strong> 開発したマクロプログラムや設計データ、詳細ガイドをメンバー限定で順次公開・提供します。</li>
+        <li><strong>トレーニング用 制御プログラム（マクロコード）</strong>
+          <ul>
+            <li>反復練習のための特定アクション（特定の技の連発、最速入力の再現など）を自動実行するプログラムコード。</li>
+            <li>PS3環境（60fps）に合わせたミリ秒単位の最適化データ。</li>
+          </ul>
+        </li>
+        <li><strong>ハードウェア構築情報</strong>
+          <ul>
+            <li>Raspberry Pi Pico等を使用した、安価で確実なコントローラー基板の構築手順。</li>
+            <li>必要な部品リストおよび配線図。</li>
+          </ul>
+        </li>
+        <li><strong>完成品・キットの提供（予定）</strong>
+          <ul>
+            <li>プログラム書き込み済みの完成品や、簡単に組み立てられるキットの提供（BOOTH等を活用）。</li>
+          </ul>
+        </li>
       </ul>
-      <h2>今後のロードマップ</h2>
-      <ul>
-        <li><strong>データ整備:</strong> キャラクターごとのフレーム・技データの集約と整理</li>
-        <li><strong>ハードウェア選定:</strong> Raspberry Pi Pico (RP2040) をベースとした低価格・高性能なコントローラーの選定</li>
-        <li><strong>マクロプログラム開発:</strong> 各種トレーニング用コマンドの組み込みと動作検証</li>
-        <li><strong>配布とレクチャー:</strong> メンバーシップ向けプログラム・ハードウェア情報の配布</li>
-      </ul>
+
+      <h2>注意事項（重要）</h2>
+      <div class="note">
+        <p>本プロジェクトで提供する環境（コマコンおよびプログラム）は、「オフライン環境での研究・反復練習・ローカル対戦」を目的としています。</p>
+        <p>PSN等を介したオンラインランクマッチ等でのマクロ使用は、ネットワーク利用規約に抵触する恐れがあるため厳禁とします。あくまで自己責任のもと、ローカルでのトレーニング用途としての利用を約束できる方のみを対象とします。</p>
+      </div>
+
       <div class="nav-links">
         <a href="frame-viewer.html">→ フレームデータを見る</a>
       </div>
